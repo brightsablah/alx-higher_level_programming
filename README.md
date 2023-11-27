@@ -18,7 +18,7 @@
 
 8. print without loops/conditional statements
 
-9. prints poem
+9. prints The Zen of Python, by Tim Peters
 
 10. write a function in C that checks if a singly linked list has a cycle in it, without Googling
 
