@@ -1,6 +1,3 @@
 #!/usr/bin/python3
 for char in range(ord('z'), ord('a') - 1, -1):
-    if char % 2 == 0:
-        print(f"{chr(char)}", end='')
-    else:
-        print(f"{chr(char - 32)}", end='')
+    print("{}".format(chr(char) if char % 2 == 0 else chr(char - 32)))
