@@ -22,6 +22,7 @@ listint_t *reverse_list(listint_t *head)
 	return (prev);
 }
 
+
 /**
  * is_palindrome - check if list reads the same backwards and forward
  * @head: pointer to first item in a linked list
