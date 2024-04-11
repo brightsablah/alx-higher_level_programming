@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 def element_at(my_list, idx):
-    list_len = len(my_list) - 1
+    max_idx = len(my_list) - 1
+
     if idx < 0:
         return None
-    elif idx > list_len:
+    elif idx > max_idx:
         return None
     else:
-        print("{}".format(my_list[idx]))
+        return my_list[idx]
