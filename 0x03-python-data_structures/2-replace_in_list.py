@@ -6,5 +6,5 @@ def replace_in_list(my_list, idx, element):
     elif idx > max_idx:
         return my_list
     else:
-        mylist[idx] = element
+        my_list[idx] = element
         return my_list
