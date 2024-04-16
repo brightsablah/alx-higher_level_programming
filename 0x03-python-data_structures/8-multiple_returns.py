@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
+    return_tup = ()
     if sentence is "":
         first_char = None
         return_tuple = (len(list(sentence)), first_char)
