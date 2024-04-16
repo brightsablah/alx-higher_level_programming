@@ -17,6 +17,6 @@ def roman_to_int(roman_string):
         if i < len(roman_string) - 1:
             if roman_dict[roman_string[i]] < roman_dict[roman_string[i + 1]]:
                 result -= value
-        else:
-            result += value
+            else:
+                result += value
     return result
