@@ -3,8 +3,10 @@ def safe_print_list_integers(my_list=[], x=0):
     print_count = 0
     try:
         for i in range(x):
-            print("{:d}".format(my_list[i]), end='')
-            print_count += 1
+            item = my_list[i]
+            if isinstance(value, int):
+                print("{:d}".format(my_list[i]), end='')
+                print_count += 1
     except:
         pass
     finally:
