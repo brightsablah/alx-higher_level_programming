@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def list_division(my_list_1, my_list_2, list_length):
     if not my_list_1 or not my_list_2:
-        for _ in range(list_range):
+        for _ in range(list_length):
             print("out of range")
         return [0] * list_length
     
@@ -9,10 +9,11 @@ def list_division(my_list_1, my_list_2, list_length):
     try:
         for i in range(list_length):
             try:
-                if isinstance(my_list_1[i], (int, float)) and isinstance(my_list_2[i], (int, float)):
-                    if my_list_2[i] == 0:
-                        raise ZeroDivisionError
-                    result_list.append(my_list_1[i] / my_list_2[i])
+                if isinstance(my_list_1[i], (int, float)):
+                    if isinstance(my_list_2[i], (int, float)):
+                        if my_list_2[i] == 0:
+                            raise ZeroDivisionError
+                        result_list.append(my_list_1[i] / my_list_2[i])
                 else:
                     raise TypeError
             except ZeroDivisionError:
