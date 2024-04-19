@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def list_division(my_list_1, my_list_2, list_length):
     if not my_list_1 or not my_list_2:
-        print("out of range" * list_length)
+        for _ in range(list_range):
+            print("out of range")
         return [0] * list_length
     
     result_list = []
