@@ -34,6 +34,14 @@ void print_python_bytes(PyObject *p)
  */
 void print_python_float(PyObject *p)
 {
+    printf("[.] float object info\n");
 
+    if (!Pyfloat_Check(p))
+    {
+        printf(" [ERROR] Invalid Float Object\n");
+        return;
+    }
 
+    double float_value = PyFloat_AsDouble(p);
+    printf(" value: %g\n", float_value);
 }
