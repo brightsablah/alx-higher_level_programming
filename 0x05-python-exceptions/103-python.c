@@ -42,6 +42,7 @@ void print_python_float(PyObject *p)
         return;
     }
 
-    double float_value = PyFloat_AsDouble(p);
+    /* accessing float value and printing result */
+    double float_value = ((PyFloatObject *)p)->ob_fval;
     printf(" value: %g\n", float_value);
 }
