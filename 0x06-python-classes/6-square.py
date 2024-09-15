@@ -46,6 +46,6 @@ class Square:
             print()
 
         # square with hosrizontal padding (position[0])
-        for i in range(self.size):
+        for j in range(self.size):
             print(" " * self.position[0], end="")
             print("#" * self.size)
