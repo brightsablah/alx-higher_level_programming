@@ -6,7 +6,7 @@ class Square:
     """Square Class"""
     def __init__(self, size=0, position=(0,0)):
         self.__size = size
-        self.__position = position
+        self.position = position
 
     @property
     def size(self):
@@ -33,7 +33,7 @@ class Square:
         self.__position = value
     
     def area(self):
-        area = self.size*self.size
+        area = self.size * self.size
         return area
 
     def my_print(self):
