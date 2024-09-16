@@ -49,15 +49,3 @@ class Square:
         for j in range(self.size):
             print(" " * self.position[0], end="")
             print("#" * self.size)
-
-
-
-#Square(5).my_print()
-#print("--")
-
-Square(3, (1, 1)).my_print()
-print("--")
-
-Square(3, (3, 0)).my_print()
-
-Square(-9, (0,3)).my_print()
