@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""New Singly List Module"""
 
 
 class Node:
