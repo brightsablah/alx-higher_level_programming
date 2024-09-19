@@ -39,23 +39,18 @@ class SinglyLinkedList:
             self.__head = new_node
         # Case 2: If the new node should be the new head (smaller than current head)
         elif value < self.__head.data:
-            # Insert the new node before the current head
-            temp = self.__head.data
-            self.__head.data = new_node
-            self.__head.next_node = temp
+            new_node.next_node = self.__head
+            self.head = new_node
 
         else:
             # Traverse the list to find the correct spot for the new node
             current = self.__head
             while current.next_node is not None and current.next_node.data < value:
-                # Move to the next node
                 current = current.next_node
 
             # Insert the new node in the correct spot
-            temp = current.next_node
-            current.next_node = new_node.next_node
-            new_node.next_node = temp
-            new_node.data = value
+            new_node.next_node = current.next_node
+            current.next_node = new_node
 
     def __str__(self):
         # Initialize an empty list to collect node data
@@ -64,7 +59,7 @@ class SinglyLinkedList:
         
         while current is not None:
             # Append each node's data to the result list
-            result.append(current.data)
+            result.append(str(current.data))
             current = current.next_node
 
         # Join the result list into a string with each value on a new line
