@@ -3,6 +3,7 @@
 
 
 class Node:
+    """Node Class"""
     def __init__(self, data, next_node=None):
         self.data = data
         self.next_node = next_node
@@ -11,7 +12,7 @@ class Node:
     @property
     def data(self):
         return self.__data
-    
+
     @data.setter
     def data(self, value):
         if not isinstance(value, int):
@@ -22,7 +23,7 @@ class Node:
     @property
     def next_node(self):
         return self.__next_node
-    
+
     @next_node.setter
     def next_node(self, value):
         if not isinstance(value, Node) and value is not None:
@@ -31,6 +32,7 @@ class Node:
 
 
 class SinglyLinkedList:
+    """Singly linked list class"""
     def __init__(self):
         self.__head = None  # Initializing the list as empty
 
