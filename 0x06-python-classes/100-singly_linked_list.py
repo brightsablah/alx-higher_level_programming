@@ -6,7 +6,6 @@ class Node:
         self.data = data
         self.next_node = next_node
 
-
     @property
     def data(self):
         return self.__data
@@ -16,7 +15,6 @@ class Node:
         if not isinstance(value, int):
             raise TypeError("data must be an integer")   
         self.__data = value
-
 
     @property
     def next_node(self):
@@ -28,33 +26,36 @@ class Node:
             raise TypeError("next node must be a node object")
         self.__next_node = value
 
-    
+
 class SinglyLinkedList:
     def __init__(self):
         self.__head = None  # Initializing the list as empty
 
     def sorted_insert(self, value):
-        new_node = Node(value)
+        new_node = Node(value, None)
 
         # Case 1: If the list is empty (i.e., head is None)
         if self.__head is None:
-            # Insert the new node as the head of the list
-            pass  # <--- You will complete this
-
+            self.__head = new_node
         # Case 2: If the new node should be the new head (smaller than current head)
         elif value < self.__head.data:
             # Insert the new node before the current head
-            pass  # <--- You will complete this
+            temp = self.__head.data
+            self.__head.data = new_node
+            self.__head.next_node = temp
 
         else:
             # Traverse the list to find the correct spot for the new node
             current = self.__head
             while current.next_node is not None and current.next_node.data < value:
                 # Move to the next node
-                pass  # <--- You'll continue traversing
+                current = current.next_node
 
             # Insert the new node in the correct spot
-            pass  # <--- You'll insert the new node between current and current.next_node
+            temp = current.next_node
+            current.next_node = new_node.next_node
+            new_node.next_node = temp
+            new_node.data = value
 
     def __str__(self):
         # Initialize an empty list to collect node data
@@ -63,7 +64,8 @@ class SinglyLinkedList:
         
         while current is not None:
             # Append each node's data to the result list
-            pass  # <--- You will fill in this logic
+            result.append(current.data)
+            current = current.next_node
 
         # Join the result list into a string with each value on a new line
         return "\n".join(result)  # This converts the result list into a string with newline separators
