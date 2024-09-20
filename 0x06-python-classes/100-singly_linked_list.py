@@ -8,7 +8,6 @@ class Node:
         self.data = data
         self.next_node = next_node
 
-
     @property
     def data(self):
         return self.__data
@@ -18,7 +17,6 @@ class Node:
         if not isinstance(value, int):
             raise TypeError("data must be an integer")   
         self.__data = value
-
 
     @property
     def next_node(self):
@@ -46,13 +44,11 @@ class SinglyLinkedList:
         elif value < self.__head.data:
             new_node.next_node = self.__head
             self.head = new_node
-
         else:
             # Traverse the list to find the correct spot for the new node
             current = self.__head
             while current.next_node is not None and current.next_node.data < value:
                 current = current.next_node
-
             # Insert the new node in the correct spot
             new_node.next_node = current.next_node
             current.next_node = new_node
@@ -66,6 +62,5 @@ class SinglyLinkedList:
             # Append each node's data to the result list
             result.append(str(current.data))
             current = current.next_node
-
         # Join the result list into a string with each value on a new line
-        return "\n".join(result)  # This converts the result list into a string with newline separators
+        return "\n".join(result)
