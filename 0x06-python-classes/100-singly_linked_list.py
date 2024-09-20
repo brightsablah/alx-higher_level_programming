@@ -43,7 +43,7 @@ class SinglyLinkedList:
         # Case 2: If the new node should be the new head
         elif value < self.__head.data:
             new_node.next_node = self.__head
-            self.head = new_node
+            self.__head = new_node
         else:
             # Traverse the list to find the correct spot for the new node
             current = self.__head
