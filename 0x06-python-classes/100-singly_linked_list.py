@@ -47,8 +47,7 @@ class SinglyLinkedList:
         else:
             # Traverse the list to find the correct spot for the new node
             current = self.__head
-            while current.next_node is not None:
-                while current.next_node.data < value:
+            while current.next_node is not None and current.next_node.data < value:
                     current = current.next_node
             # Insert the new node in the correct spot
             new_node.next_node = current.next_node
