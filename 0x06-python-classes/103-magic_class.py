@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-import math
 """ New Module defines magic class """
 
+
+import math
 
 class MagicClass:
     """ Magic Class for circle """
