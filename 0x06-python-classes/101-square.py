@@ -61,7 +61,7 @@ class Square:
         for i in range(self.position[1]):
             result.append("")
 
-        #square with horizontal padding (position[0])
+        # square with horizontal padding (position[0])
         for j in range(self.size):
             result.append(" " * self.position[0] + "#" * self.size)
 
