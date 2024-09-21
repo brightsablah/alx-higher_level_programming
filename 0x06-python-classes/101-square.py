@@ -49,3 +49,18 @@ class Square:
         for j in range(self.size):
             print(" " * self.position[0], end="")
             print("#" * self.size)
+
+    # print same thing as my_print
+    def __str__(self):
+        if self.size == 0:
+            print()
+            return
+
+        # vertical padding (position[1])
+        for i in range(self.position[1]):
+            print()
+
+        # square with hosrizontal padding (position[0])
+        for j in range(self.size):
+            print(" " * self.position[0], end="")
+            print("#" * self.size)
