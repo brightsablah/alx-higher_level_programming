@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 import math
+""" New Module defines magic class """
+
 
 class MagicClass:
+    """ Magic Class for circle """
     def __init__(self, radius=0):
         self.__radius = 0
 
