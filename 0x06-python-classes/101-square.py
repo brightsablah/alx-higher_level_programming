@@ -45,7 +45,7 @@ class Square:
         for i in range(self.position[1]):
             print()
 
-        # square with hosrizontal padding (position[0])
+        # square with horizontal padding (position[0])
         for j in range(self.size):
             print(" " * self.position[0], end="")
             print("#" * self.size)
@@ -53,14 +53,16 @@ class Square:
     # print same thing as my_print
     def __str__(self):
         if self.size == 0:
-            print()
-            return
+            return "\n"
+
+        result = []
 
         # vertical padding (position[1])
         for i in range(self.position[1]):
-            print()
+            result.append("")
 
-        # square with hosrizontal padding (position[0])
+        #square with horizontal padding (position[0])
         for j in range(self.size):
-            print(" " * self.position[0], end="")
-            print("#" * self.size)
+            result.append(" " * self.position[0] + "#" * self.size)
+
+        return "\n".join(result)
