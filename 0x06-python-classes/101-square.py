@@ -53,7 +53,7 @@ class Square:
     # print same thing as my_print
     def __str__(self):
         if self.size == 0:
-            return "\n"
+            return ""
 
         result = []
 
