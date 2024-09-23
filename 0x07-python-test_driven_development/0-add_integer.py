@@ -12,5 +12,3 @@ def add_integer(a, b=98):
     num2 = int(b)
     sum = num1 + num2
     return sum
-
-print(add_integer(3))
