@@ -4,3 +4,14 @@ class test_add_integer(unittest.TestCase):
     """ test class """
     def test_add(self):
         self.assertEqual(add_integer(2, 3), 5)
+
+    def test_type_errors(self):
+    """Test invalid types for a and b."""
+    with self.assertRaises(TypeError):
+        add_integer("1", 2)  # a is a string
+    with self.assertRaises(TypeError):
+        add_integer(1, "2")  # b is a string
+    with self.assertRaises(TypeError):
+        add_integer([1, 2], 3)  # a is a list
+    with self.assertRaises(TypeError):
+        add_integer(1, None)  # b is None
