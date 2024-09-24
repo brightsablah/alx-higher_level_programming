@@ -15,3 +15,4 @@ class test_add_integer(unittest.TestCase):
         add_integer([1, 2], 3)  # a is a list
     with self.assertRaises(TypeError):
         add_integer(1, None)  # b is None
+        
